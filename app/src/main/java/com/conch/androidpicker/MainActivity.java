@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 
+import com.conch.timepicker.CityPopupWindow;
 import com.conch.timepicker.TimeDialog;
 import com.conch.timepicker.TimePopupWindow;
 
@@ -20,6 +21,8 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     TimePopupWindow pwTime;
+    CityPopupWindow cityPopupWindow;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +34,13 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                pwTime.showAtLocation(view, Gravity.BOTTOM, 0, 0, new Date());
+                //Popupwindow形式展示时间
+//                pwTime.showAtLocation(view, Gravity.BOTTOM, 0, 0, new Date());
+
+                //popupwindow形式展示城市
+
+                cityPopupWindow.showAtLocation(view, Gravity.BOTTOM, 0, 0);
+
             }
         });
 
@@ -50,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //时间选择器Dialog
-        TimeDialog timeDialog = new TimeDialog(this, TimePopupWindow.Type.ALL, true,"");
+        TimeDialog timeDialog = new TimeDialog(this, TimePopupWindow.Type.ALL, true, "");
         timeDialog.setTime(new Date());
         timeDialog.setOnTimeSelectListener(new TimeDialog.OnTimeSelectListener() {
             @Override
@@ -60,6 +69,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         timeDialog.show();
+
+
+        //城市选择器PopupWindow
+        cityPopupWindow = new CityPopupWindow(this);
+        cityPopupWindow.setOnSelectListener(new CityPopupWindow.OnSelectListener() {
+            @Override
+            public void onTimeSelect(String data) {
+                Toast.makeText(MainActivity.this, data, Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
 
