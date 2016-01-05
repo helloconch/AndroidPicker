@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AndroidPicker</string>
+    <string name="action_settings">Settings</string>
+    <!--时间选择器添加-->
+    <string name="picker_select">请选择</string>
+    <string name="timepicker_titlte">请选择时间</string>
+    <string name="timepicker_start_titlte">选取起始时间</string>
+    <string name="timepicker_end_titlte">选取结束时间</string>
+    <string name="timepicker_cancel">取消</string>
+    <string name="timepicker_submit">确定</string>
+    <string name="timepicker_year">年</string>
+    <string name="timepicker_month">月</string>
+    <string name="timepicker_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="timepicker_minutes">分</string>
+    <string name="timepicker_seconds">秒</string>
+</resources>
