@@ -1,9 +1,9 @@
 # AndroidPicker
 选择器（时间/数字/城市）
 
-1.PopupWindow形式
-2.Dialog形式
-3.可以直接使用arr文件形式（http://blog.csdn.net/getchance/article/details/47257389 ）
+1.PopupWindow形式<br/>
+2.Dialog形式<br/>
+3.可以直接使用arr文件形式（http://blog.csdn.net/getchance/article/details/47257389 ）<br/>
 
 参考调用方式
 public class MainActivity extends Activity {
