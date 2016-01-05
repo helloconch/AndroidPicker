@@ -5,10 +5,11 @@
 2.Dialog形式<br/>
 3.可以直接使用arr文件形式（http://blog.csdn.net/getchance/article/details/47257389 ）<br/>
 
-参考调用方式
+参考调用方式<br/>
+```java
 public class MainActivity extends Activity {
-    TimePopupWindow pwTime;
 
+    TimePopupWindow pwTime;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +51,6 @@ public class MainActivity extends Activity {
             }
         });
         timeDialog.show();
-
-    }
 }
+```
 
